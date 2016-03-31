@@ -1,0 +1,368 @@
+@CHARSET "UTF-8";
+		#_opener_tab{
+				background-color:white !important;
+		}
+		.extenda{
+			color: #627AAD ;
+			font-size: 11px !important;
+			font-weight: normal !important;
+			outline: none medium;
+			text-decoration: none;
+			cursor:pointer;
+		}
+		
+		.extendadisable{
+			color:grey;
+			font-size: 11px !important;
+			font-weight: normal !important;
+			outline: none medium;
+			text-decoration: none;
+			cursor:not-allowed;
+		}
+		.title{
+			background-color:#f9f9f9;
+			padding:4px !important;
+		}
+
+		.table-hover tbody td{
+			cursor:pointer;	
+		}
+		.table tbody td{
+		  text-align:left;
+		}
+		
+		.table>tfoot>tr>td{
+			padding:2px !important;
+			vertical-align: middle;
+		}
+		
+		.table tfoot  .pagination{
+			margin:2px 5px 0px 5px !important;
+		}
+		
+		.table tfoot  .pagination .current,.table tfoot  .pagination .next,.table tfoot  .pagination .prev,.table tfoot  .pagination a{
+			margin-bottom : 0px;
+		} 
+
+		.table  tr.selected td{
+		    background-color:yellow;
+		}
+		
+		.table.table-hover tbody tr.selected:hover td {
+		    background-color:yellow;
+		}
+		
+		.table-striped tbody>tr.selected td{
+		 	background-color:yellow;
+		}
+
+		.mytree{
+			margin:-8px 0 0 -6px;
+			overflow-x:auto;
+			overflow-y:auto;
+			width:100%;
+		}
+	
+		
+		.myhtml5file { 
+			position:relative; 
+		} 
+		.myhtml5file input { 
+			font-size:16px; 
+			margin:0; 
+			padding:0; 
+			position:relative; 
+			vertical-align:middle; 
+			outline:none; 
+		} 
+		.myhtml5file input[type="text"] { 
+			width:172px; 
+			z-index:4; 
+		} 
+		.myhtml5file input[type="button"] { 
+			width:84px; 
+			height:25px; 
+			z-index:2; 
+		} 
+		.myhtml5file input[type="file"] { 
+			position:absolute; 
+			right:0px; 
+			height:25px; 
+			opacity:0; 
+			z-index:3; 
+		} 
+		
+		.boxextend_top{
+			margin-bottom:-10px;
+			border:0px;
+		}		
+		
+		.boxextend{
+			margin-bottom:0px;
+			border:0px;
+		}		
+		
+		
+		.pagination{
+			cursor:pointer;
+		}
+		
+		
+		.pagination a, .pagination span{
+			min-width:2em;
+		}
+		
+		.pagination .current.next{
+			width:auto !important;
+		}
+		
+		.pagination .current.prev{
+			width:auto !important;
+		}
+
+		.box .box-footer {
+			border:0px;
+		}
+		.mytree{
+			padding-top:15px;
+			padding-left:10px;
+		}
+		.leftmenupane{
+			  background: white;
+			  -webkit-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
+			  -moz-box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.1);
+			  box-shadow: inset -3px 0px 8px -4px rgba(0, 0, 0, 0.3);
+		}
+		.nopadding{
+			padding:0px !important;
+		}
+		.box{
+		 	box-shadow:none !important;
+		 }
+		 
+		 .panel-block{
+		 	margin: 10px;
+		 }
+
+		 .panel-block .panel-heading{
+		 	font-weight: bold;
+		 }
+
+		 .panel-block .table{
+		 	margin-bottom: 0px;
+		 }
+
+		 
+		 .btnlabel > .glyphicon, .btnlabel > .fa, .btnlabel > .ion {
+		  margin-right: 10px;
+		}
+		.disable{
+			color:grey;
+		}
+		.enable{
+			color:blue;
+		}
+		.mytoolbar{
+		    padding: 3px;
+		    border-style: solid;
+		    box-sizing: border-box; 
+		    background-color: #f7f7f9;  
+		    border-color: #ddd;  
+		    border-width: 1px;  
+		    border-radius: 4px 4px 0 0;
+		    box-shadow: none;
+		}
+		.mytoolbar .btn-default{
+		    background-color: white;
+		}
+		.crossheader{
+			text-align:center;		
+			vertical-align:middle !important;		
+		}
+		
+		.dropdown-toggle{
+			min-width:100px;
+		}
+		.rightmenu{
+			cursor:pointer;
+		}
+		.gridmainfooter {
+		  padding: 2px  10px;
+		  margin-top:-8px;
+		  height:39px;
+		}		
+		
+		.gridchildfooter {
+		  padding: 2px;
+		  border-top: 0px;
+		  border-bottom-right-radius: 3px;
+		  border-bottom-left-radius: 3px;
+		  height:39px;
+		}
+		
+		.panel-group {
+		  margin-bottom: 10px !important;
+		}
+		
+		.table>tbody>tr>td{
+		  vertical-align:middle !important;
+		}
+		
+		table.table-edit>tbody>tr>td{
+		  padding: 2px !important;
+		}
+		
+		table.table>tbody>tr>th.tdkey{
+		  text-align:right;
+		}
+		.sidebar{
+			cursor:pointer;
+		}
+		
+		.my97date {
+		
+		  height: 34px;
+		  padding: 6px 12px;
+		  font-size: 14px;
+		  line-height: 1.42857143;
+		  color: #555;
+		  background-color: #fff;
+		  background-image: none;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+		  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+		  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+		  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+		}
+		
+/**
+* condition
+*/
+		.gdjs{
+			border-color: #fff;
+		}
+		
+		.gdjs-form-search{
+			margin-top:5px;
+		}
+
+		.gdjs-form-search .form-control{
+			display :inline;
+			width: 50%;
+		}
+		
+		.table-responsive{
+			overflow-x: auto;
+		}
+		
+		.select2-selection--single{
+			height:32px !important
+		}
+		
+		a, button{
+			cursor:pointer;
+		}
+		.gdjs-search{
+			margin-top:10px;
+			margin-bottom:0px;
+			text-align:center;
+		}
+		.gdjs .panel-heading{
+			padding-bottom:0px;
+		}
+		.form-control{
+			display:inline
+		}
+		
+		
+.list_box {
+	padding: 0px 0px 0px 20px;
+	width: 800px;
+}
+.list_box ul {
+	list-style: none;
+}
+
+.list_box li {
+vertical-align: middle;
+}
+
+.list_box .list_item {
+	border-bottom: 1px solid #D8D8D8;
+	padding: 12px 10px 5px 10px;
+	overflow: hidden;
+	margin: 0px;
+}
+
+.left {
+	float: left;
+}
+
+.list_box .list_content {
+	padding: 0 0 0 10px;
+	margin:0px;
+	float: left;
+	width: 465px;
+	display: inline;
+	word-break: normal;
+	word-wrap: normal;
+}
+
+.list_box .list_content dt {
+	height: 20px;
+	line-height: 20px;
+}
+
+
+.list_box .list_title {
+	display: inline-block;
+	float: left;
+	padding-top: 2px;
+}
+
+.list_box .list_title a {
+	color: #333333;
+	text-decoration: none;
+}
+
+
+.list_box .list_version {
+	color: #528b00;
+	display: inline-block;
+	float: left;
+	margin: 0px 10px;
+	font-weight: bold;
+}
+
+
+.list_box .list_describe {
+	line-height: 20px;
+	margin: 5px 0px 8px 0px;
+	color: #777777;
+}
+
+.list_r_w {
+	width: 102px;
+	float: right;
+	valign: middle;
+}
+
+.list_star {
+	float: left;
+	margin: 4px 0px 0px 0px;
+}
+
+.star_4_s {
+	width: 75px;
+	height: 13px;
+	overflow: hidden;
+	background-position: -19px -52px;
+}
+
+.star_bg {
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+}

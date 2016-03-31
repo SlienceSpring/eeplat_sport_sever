@@ -1,0 +1,61 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<div id='result'>
+	
+	</div>
+
+</body>
+
+<script>
+
+  console.log("EEPlat Restful Service test...");
+////120.25.230.163
+  var globalService = "http://127.0.0.1:8080/eeplat/api";
+  var paras = "userName=llp&pwd=llp_dev_0001";
+  
+  var token = "";
+  $
+	.ajax({
+		type : "get",
+		url : globalService + "/token",
+		data : paras,
+		async : false,
+		success : function(data, textStatus) {
+			console.log(data);
+			token = data.token;
+		},
+		dataType : "json"
+	});
+
+	console.log("token::" + token);
+  
+  $("#result").html("token::" + token);
+  /////增加一个公司
+  
+  paras ="access_token=" + token;
+  paras = paras + "&positionname=" + encodeURIComponent(escape("信任2"))  
+				+ "&fullname=" + encodeURIComponent(escape("123asd"))
+				+ "&nickname=" + encodeURIComponent(escape("11111111"))
+				+ "&userid=" + encodeURIComponent(escape("40289f0c4e4ca5e1014e4cc9ec0d0023"));
+				+ "&birthday=" + encodeURIComponent(escape("2012-02-02"));
+    $
+	.ajax({
+		type : "post",
+		url : globalService + "/p/information",
+		data : paras,
+		success : function(data, textStatus) {
+			console.log(data);
+					},
+		dataType : "json"
+	});
+  
+
+</script>
+
+
+</html>

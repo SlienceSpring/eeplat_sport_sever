@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="ROBOTS" content="NOARCHIVE">
+
+<title>AppShare - eeplat - Open Source Metadata PaaS - Google
+	Project Hosting</title>
+<link type="text/css" rel="stylesheet" href="./eeplatfiles/core.css">
+<link type="text/css" rel="stylesheet" href="./eeplatfiles/style.css">
+
+<link type="text/css" rel="stylesheet"
+	href="./eeplatfiles/ph_detail.css">
+
+<link	href="../bootstrap/assets/css/bootstrap.min.css"	rel="stylesheet">
+
+
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/11512667522589661435/css/d_ie.css" >
+<![endif]-->
+<style type="text/css">
+.menuIcon.off {
+	background: no-repeat
+		url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0
+		-42px
+}
+
+.menuIcon.on {
+	background: no-repeat
+		url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0
+		-28px
+}
+
+.menuIcon.down {
+	background: no-repeat
+		url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0
+		0;
+}
+
+#maincol {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+blockquote{
+	border:0px;
+}
+</style>
+<script></script>
+</head>
+<body class="t6">
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#eeplatnav">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="http://share.eeplat.com/eeplatshare/web/site"><img style="margin-top: -15px"
+				src="images/logo_appshare.png"></img></a>
+		</div>
+
+
+		<div class="collapse navbar-collapse" id="eeplatnav">
+
+			<ul class="nav navbar-nav">
+				<li><a href="#">关于AppShare</a></li>
+				<li><a href="help_main.jsp">帮助</a></li>
+				<!-- 
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>-->
+			</ul>
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group ">
+					<label></label> <input type="text" class="form-control"
+						id="enterAppName" placeholder="请输入你要搜索的应用名称">
+				</div>
+				<button type="button" onclick="findApp()" class="btn btn-default">搜索</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="http://www.eeplat.com" target="_opener">EEPlat官网</a></li>
+				<li><a
+					href="http://share.eeplat.com/eeplatshare/appshare/register.jsp">注册</a></li>
+				<li><a href="http://share.eeplat.com/eeplatshare">登录</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	</nav>
+
+        <script type="text/javascript">
+		var cancelBubble = false;
+		function _go(url) {
+			document.location = url;
+		}
+	</script>
+	<div id="maincol"
+		style="padding: 0 3px 3px 0; margin: 0; text-align: center;">
+
+
+
+
+
+
+
+
+
+		<style type="text/css">
+#wikimaincol {
+	padding-top: 6px;
+	padding-left: 1em
+}
+
+#sidebarcontainer {
+	padding: 1.5em 2px 2px 2px;
+	min-width: 15em;
+	max-width: 20em;
+	overflow: hidden;
+}
+
+.sidebartop ul {
+	margin: 0 0 0 .5em;
+	padding-left: 0 !important;
+	list-style: none
+}
+
+.sidebartop ul ul {
+	margin-left: 1em;
+	padding-left: 0;
+	list-style: none;
+	display: none
+}
+
+.sidebartop li {
+	margin: 0 0 2px 0;
+	padding: 1px;
+	padding-left: 14px;
+	cursor: pointer
+}
+
+.sidebartop li a {
+	padding: 2px
+}
+
+.sidebartop li {
+	background: url(https://ssl.gstatic.com/codesite/ph/images/plus.gif)
+		no-repeat 1px 3px
+}
+
+.sidebartop li.treeopen {
+	background: url(https://ssl.gstatic.com/codesite/ph/images/minus.gif)
+		no-repeat 1px 3px
+}
+
+.sidebartop li.treeleaf {
+	background: none
+}
+
+.currentpagelink {
+	font-weight: bold;
+	text-decoration: none;
+	color: black !important;
+	background: #c3d9ff;
+}
+
+.sidebartop ul.treeleafcontainer {
+	display: block;
+}
+
+.sidebarcontent {
+	vertical-align: top;
+	padding-right: 3px;
+	border-right: 2px solid #ccc;
+}
+</style>
+
+
+
+		<style type="text/css">
+.delcom {
+	background: #e8e8e8
+}
+
+.commentcontent {
+	margin: 2em;
+	padding: 0px 10px;
+	width: 66em;
+}
+
+.artifactcomment {
+	border-top: 3px solid #c3d9ff;
+}
+
+#commentform {
+	border-top: 3px solid #c3d9ff;
+}
+</style>
+
+		<div id="wikipage">
+			<table style="margin: auto; text-align: left;">
+				<tbody>
+					<tr>
+
+
+
+
+						<td style="vertical-align: top; padding-left: 5px">
+
+							<div id="wikiheader">
+
+								<span style="font-size: 120%; font-weight: bold">AppShare</span>
+								&nbsp;
+								<div>
+
+								</div>
+							</div>
+
+							<div id="wikicontent">
+								<div class="vt" id="wikimaincol">
+									<blockquote>在苹果AppStore大获成功的影响下，国内手机的应用商店发展的很快，另外SaaS的应用商店也在飞速发展，如国家中小企业信息化公共云服务平台、风云在线、用友伟库等。手机应用商店以个人用户为主的情况，
+										手机应用的范围很广，包括娱乐、媒体、商务、教育等多个方面，应用间的关联性不大，但是SaaS应用商店的用户主要是商业组织或政府，一般为了解决组织在生产经营管理过程中遇到的问题，
+										应用间的关联性非常强。</blockquote>
+									<p></p>
+									<blockquote>然而国内的SaaS应用商店中只是提供第三方应用的链接入口，应用间基本都是相互割裂的，每个应用都是信息孤岛，无法互联互通，比如一个应用中决策需要另外一个系统的数据，但是无法导出和导入；还如，一个应用中有组织结构，另外一个应用也存在，存在功能重叠的现象，由于两个系统独立得存在，也容易造成数据不一致;
+										另外还存在其它问题如多次登录、界面不统一，操作习惯不一致，数据分散等等。</blockquote>
+									<p></p>
+									<blockquote>EEPlat的应用商店AppShare
+										不但解决了上述的问题，而且在应用间互联互通、软件复用、产业链分工等方面有更好的实践和思路，不同于一般SaaS应用商店只提供业务系统的链接入口，EEPlat中的应用可以分为三大类：
+									</blockquote>
+									<blockquote style="text-align: center;">
+										<img src="./eeplatfiles/appshare_struture.png">
+									</blockquote>
+									<blockquote>
+										<h3>
+											<a name="业务系统或模块"></a>业务系统或模块
+										</h3>
+									</blockquote>
+									<blockquote>业务系统和一般应用商店提供的业务系统类似，如CRM（客户关系管理）、ERP（企业资源计划）、OA（办公自动化）、HR（人力资源挂历）等等。另外，这些应用可以不是一个完整的系统，也可以是系统的一个模块或辅助工具，例如公司A开发有OA系统，公司B可以为OA系统开发会议管理模块。
+									</blockquote>
+									<blockquote>业务系统或模块基于EEPlat开发，运行于EEPlat提供的基础设施之上，应用可能来自不同的开发商，但是统一平台，统一登录，数据统一，操作习惯统一，界面统一；应用间数据互联互通。
+									</blockquote>
+									<p></p>
+									<blockquote>
+										<p></p>
+										<h3>
+											<a name="组件"></a>组件
+										</h3>
+									</blockquote>
+									<blockquote>组件和具体业务关联性弱，是平台本身功能的扩展，运行于EEPlat提供的基础设施之上。平台并不区分系统组件和自定义组件，默认组件和自定义组件的级别是等同的、可互换的。
+										组件包含后台通用处理动作、流程模板、报表模板、UI组件等。 后台通用处理动作基于EEPlat
+										API，可以在某个特定场景下处理同类后台处理请求，如默认提供了批量保存、启动工作流、提交任务等通用处理动作。</blockquote>
+									<blockquote>流程模板是XML格式的业务流程描述，供类似流程需求做参考。</blockquote>
+									<blockquote>报表模板是Excel格式的模板，不同组织间有很多类似的报表需求，这些报表模板的共享可以节省大量的社会劳动时间。
+									</blockquote>
+									<blockquote>UI组件在业务系统中占据非常重要的位置，据统计UI的开发大约占整体开发时间的的70%。平台缺省提供100多种不同的UI组件，还可以从商店中下载大量的第三方公司开发的UI组件，这些组件可插拔、可替换、下载即可用。
+									</blockquote>
+									<p></p>
+									<blockquote>
+										<h3>
+											<a name="基础服务"></a>基础服务
+										</h3>
+									</blockquote>
+									<blockquote>基础服务和上两类应用不同，它可以不运营在EEPlat提供的基础设施之上，但需要按照EEPlat
+										Open
+										Api提供相关接口，这些接口本身可能会封装成第二类应用“组件”。包括：邮件、短信、传真、定时执行、与ERP通讯等基础服务。
+									</blockquote>
+									<p></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+
+
+
+
+		<br>
+
+
+
+
+
+		<form name="delcom"
+			action="https://code.google.com/p/eeplat/w/delComment.do"
+			method="POST">
+			<input type="hidden" name="sequence_num" value=""> <input
+				type="hidden" name="create_time" value=""> <input
+				type="hidden" name="mode" value=""> <input type="hidden"
+				name="pagename" value="AppShare"> <input type="hidden"
+				name="token" value="">
+		</form>
+
+
+
+
+
+	</div>
+
+
+	<div class="hostedBy" style="margin-top: -20px;">
+		<span style="vertical-align: top;">Powered by <a
+			href="http://share.eeplat.com/eeplatshare/web/site/">EEPlat Appshare</a></span>
+	</div>
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		_CS_reportToCsi();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset='utf-8'>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="all"
+	href="./eeplatfiles/style.css">
+<style type='text/css'>
+* {
+	margin: 0px;
+	padding: 0px;
+}
+</style>
+</head>
+<body>
+	<div class="zuo2kuang">
+		<h2>第一个工程</h2>
+		<div class="postinfo">
+			<a href="#">创建工程</a> &nbsp;|&nbsp; <a href="#" title="查看使用帮助中的全部文章"
+				rel="category tag">使用帮助</a> &nbsp;|&nbsp; 2014.03.25
+		</div>
+		<div class="gengxinzi">
+			<h4>第一个工程业务说明</h4>
+			<p>第一个工程业务说明我们的第一个工程选择做一个非常简单的项目管理分为两个模块，项目信息管理和人员信息管理，一个项目必须指定一个项目负责人，项目负责人的信息存储在人员信息表中。下面介绍中用到的数据源以MySql为例。</p>
+			<h4>建立工程</h4>
+			<p>1、进入eeplat主页，填写相应信息（工程名称必须为英文数字，不支持中文！），点击“创建工程”</p>
+			<p>
+				<img class="alignnone size-full wp-image-634"
+					src="./eeplatfiles/1chuangjiangongcheng.png" width="683"
+					height="363">
+			</p>
+			<p>&nbsp;</p>
+			<p>2、创建完成后，进入EEPlat后台，点击“数据库管理”</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/2shujukuguanli.png" width="683" height="363">
+			</p>
+			<p>&nbsp;</p>
+			<p>
+				3、进入数据库管理界面，系统默认建立了7个示例数据源，在这里我们以MySql数据库为例子进行介绍。 <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选中MySql列，点击“修改”
+			</p>
+			<p>
+				<img class="alignnone size-full wp-image-636"
+					src="./eeplatfiles/3_xiugaianniu.png" width="683" height="363">
+			</p>
+			<p>&nbsp;</p>
+			<p>
+				4、进入MySql数据库配置信息界面，填写相关信息（
+				本地数据库名为firsteeplat，所以把驱动URL修改为：jdbc:mysql://127.0.0.1:3306/firsteeplat?useUnicode=true&characterEncoding=utf-8
+				&nbsp;&nbsp; 用户名、密码根据自己数据库进行相应配置。）&nbsp;&nbsp; 点击“保存”<br />
+				&nbsp;&nbsp; <font color="red">注意：①MySql中含有名为firsteeplat的数据库；②保存成功后需要重启tomcat，并刷新当前页面</font>
+			</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/3shujukupeizhi.png" width="683" height="363">
+			</p>
+			<p>
+				5、选中配置好的MySql，点击“初始化组织权限”<br />
+				&nbsp;&nbsp;初始化默认的权限相关的数据对象的数据源，同时创建权限相关表。初始化完成后，不可再进行初始化。
+			</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/4chushihua.png" width="683" height="363">
+			</p>
+			<p>6、初始化成功后，打开数据库可以看到，系统自动创建了相关表</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/5shujukubiao.png" width="683" height="363">
+			</p>
+			<p>
+				7、利用数据库的管理工具，根据 <a class='underline'
+					href="https://code.google.com/p/eeplat/wiki/AboutSQL">附录示例表的SQL</a>
+				中的SQL语句来创建项目表（PM_ProjectInfor）和人员表（PM_CustomInfor）。
+			</p>
+			<p>8、上述表创建后，进入数据库管理界面，选择MySql数据源，点击“初始化数据表”</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/6_chushibiaoanniu.png" width="683" height="363">
+			</p>
+			<p>9、双击左边的树节点即可刷新该节点下面的数据，可以看到已经初始化完成；初始化成功的一个简单特点是每个业务对象下面包含6个服务和11个面板</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/7shuaxin.png" width="683" height="363">
+			</p>
+			<p>
+				10、在此需要设置表间关联，选择业务对象pm_projectinfor<br /> &nbsp;&nbsp;
+				点击右侧“关联业务对象”，填写相应对应信息，在这里通过custuid字段关联项目负责人<br /> &nbsp;&nbsp;
+				点击“生成关联”
+			</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/8shezhiguanlian.png" width="683" height="363">
+			</p>
+			<p>11、进入首页，点击“字典翻译”</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/9zidianfanyianniu.png" width="683" height="363">
+			</p>
+			<p>
+				12、把附件 <a class='underline'
+					href="https://code.google.com/p/eeplat/wiki/Translating">本地化代码
+				</a> 中的代码 拷贝到文本域，点击“确定”
+			</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/10zidianfanyi.png" width="683" height="363">
+			</p>
+			<p>13、点击界面右上方的“清空缓存”，刷新缓存。</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/11qingkonghuancun.png" width="683" height="363">
+			</p>
+			<p>14、进入首页，测试工程，点击“打开工程登录” 或 “直接打开工程”</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/12gongchengshouye.png" width="683" height="363">
+			</p>
+			<p>15、打开新建工程首页，默认用户名：u 密码：1111，点击“登录”</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/13gongchengdenglu.png" width="683" height="363">
+			</p>
+			<p>16、现在我们可以对项目信息和人员信息进行简单的管理，并且可以为项目指定负责人了，至此第一个简单项目开发完成</p>
+			<p>
+				<img class="alignnone size-full wp-image-635"
+					src="./eeplatfiles/13gongchengzhuye.png" width="683" height="363">
+			</p>
+
+
+
+		</div>
+		<div class="liulan">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="tubiao01 tubiao00" href="#">3.189浏览&nbsp;&nbsp;&nbsp;</a>
+			<a class="tubiao02 tubiao00" href="#">0回应 &nbsp;&nbsp;</a> <span
+				class="tags">标签：<a href="#" rel="tag">如何创建工程</a><a href="#"
+				rel="tag">第一个工程</a></span>
+		</div>
+	</div>
+</body>
+
+
+</html>

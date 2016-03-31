@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+.RsidebarWrap {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 35px;
+	height: 100%;
+	z-index: 9999;
+}
+.RsidebarTab {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -179px;
+	width: 29px;
+	height: 100%;
+	border-right: 5px solid #cacfd3;
+}
+.RsidebarTab li {
+	position: relative;
+	width: 35px;
+	height: 35px;
+	margin-bottom: 1px;
+	cursor: pointer;
+	background-color: #cacfd3;
+	border-radius: 3px 0 0 3px;
+}
+.RsidebarTab li .rstab-txt {
+	font-style: normal;
+	font-weight: normal;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	left: 35px;
+	top: 0;
+	background-color: #cacfd3;
+}
+.RsidebarTab li span.glyphicon {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 900;
+	padding: 8px 0 0 6px;
+}
+.RsidebarTab li span.badge {
+	position: absolute;
+	right: 6px;
+	right: -35px;
+	top: -8px;
+	background-color: #ba070e;
+}
+.RsidebarTab li.active,
+.RsidebarTab li.active:hover,
+.RsidebarTab li:hover {
+	background-color: #347ab8;
+	border: 0;
+}
+.RsidebarTab li.active .rstab-txt,
+.RsidebarTab li.active:hover .rstab-txt,
+.RsidebarTab li:hover .rstab-txt {
+	left: -77px;
+	background-color: #347ab8;
+	border-radius: 3px 0 0 3px;
+}
+.RsidebarTab li.active span.badge,
+.RsidebarTab li.active:hover span.badge,
+.RsidebarTab li:hover span.badge { right: -35px; }

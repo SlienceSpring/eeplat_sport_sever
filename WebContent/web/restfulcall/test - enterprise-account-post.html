@@ -1,0 +1,59 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<div id='result'>
+	
+	</div>
+
+</body>
+
+<script>
+
+  console.log("EEPlat Restful Service test...");
+////120.25.230.163
+  var globalService = "http://www.lianlianpin.com/eeplat/api";
+  var paras = "userName=llp&pwd=llp_dev_0001";
+  
+  var token = "";
+  $
+	.ajax({
+		type : "get",
+		url : globalService + "/token",
+		data : paras,
+		async : false,
+		success : function(data, textStatus) {
+			console.log(data);
+			token = data.token;
+		},
+		dataType : "json"
+	});
+
+	console.log("token::" + token);
+  
+  $("#result").html("token::" + token);
+  /////增加一个公司
+  
+  paras ="access_token=" + token;
+  paras = paras + "&companyuid=8af4e49d4e90fb7a014e911f3a40000e" + "&fillmoney=5001"
+  + "&filloperater=" + encodeURIComponent(escape("司机哥5"))
+			;
+    $
+	.ajax({
+		type : "post",
+		url : globalService + "/enterprise_account",
+		data : paras,
+		success : function(data, textStatus) {
+			console.log(data);
+					},
+		dataType : "json"
+	});
+  
+
+</script>
+
+
+</html>

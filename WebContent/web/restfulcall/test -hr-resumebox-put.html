@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<div id='result'>
+	
+	</div>
+
+</body>
+
+<script>
+
+  console.log("EEPlat Restful Service test...");
+////120.25.230.163
+  var globalService = "http://127.0.0.1:8080/eeplat/api";
+  var paras = "userName=llp&pwd=llp_dev_0001";
+  
+  var token = "";
+  $
+	.ajax({
+		type : "get",
+		url : globalService + "/token",
+		data : paras,
+		async : false,
+		success : function(data, textStatus) {
+			console.log(data);
+			token = data.token;
+		},
+		dataType : "json"
+	});
+
+	console.log("token::" + token);
+  
+  $("#result").html("token::" + token);
+  
+  paras ="access_token=" + token;
+  paras = paras + "&createtype=" + encodeURIComponent(escape("1"))  + "&objuid=" + encodeURIComponent(escape("8af4e49d4f4fc4dc014f4ff6e839001d"))  
+			+ "&userid=" + encodeURIComponent(escape("8af4e49d4e8b904f014e8b988dee0005")) + "&resumestate=dcl"
+			;
+    $
+	.ajax({
+		type : "put",
+		url : globalService + "/hr/resumebox?" + paras,
+		data : paras,
+		success : function(data, textStatus) {
+			console.log(data);
+		},
+		dataType : "json"
+	});
+  
+
+</script>
+
+
+</html>

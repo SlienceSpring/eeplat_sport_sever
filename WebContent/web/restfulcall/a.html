@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<ul>
+		<li>
+			<a name="a1" href="#p1">A1</a>
+		</li>
+
+		<li>
+			<a name="a2" href="#p2">A2</a>
+		</li>
+		
+		<li>
+			<a name="a3" href="#p3">A3</a>
+		</li>
+	
+	</ul>
+	
+	<div id='result'>
+	
+	</div>
+	
+	<script>
+		$("ul>li>a").bind('click',
+			function(){
+				console.log("A Name::" + $(this).text())
+				$("#result").text($(this).text() + "  welcome!");
+			}
+		);
+		
+		var ep = {};
+		
+		ep.myHash = new function(aSize){
+			this.map = {}; 
+			this.limit = 100;
+			if(aSize != undefined){
+				this.limit = aSize;
+			}
+			this.array = new Array();
+			this.put = function(aKey,aValue){
+				this.map[aKey] = aValue; 
+				this.array.push(aKey);
+				if(this.size() > this.limit){
+					var first = this.array.shift();
+					this.del(first);					
+				}
+			}
+			
+			this.get = function(aKey){ 
+				return this.map[aKey];
+			}
+			
+			this.has  = function(aKey){
+				return aKey in this.map;
+			}
+			
+			this.del = function(aKey){
+				delete this.map[aKey];
+			}
+			
+			this.size = function(){
+				return this.array.length;
+			}
+		}
+		
+		
+	//	var urlHash = new ep.myHash(3);
+		
+		ep.myHash .put("sina","www.sina.com.cn");
+		ep.myHash .put("sohu","www.sohu.com.cn");
+		ep.myHash .put("alibaba","www.alibaba.com.cn");
+		ep.myHash .put("baidu","www.baidu.com.cn");
+		
+		console.log(ep.myHash .get("sina"));
+		console.log(ep.myHash .get("sohu"));
+		console.log(ep.myHash .get("alibaba"));
+		console.log(ep.myHash .get("baidu"));
+		
+	</script>
+
+</body>
+	
+	
+
+</html>

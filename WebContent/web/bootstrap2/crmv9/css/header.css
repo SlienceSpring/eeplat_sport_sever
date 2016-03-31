@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* CSS Document */
+html,
+body { height: 100%; }
+body { font-size: 14px; }
+.navbar-default { background-color: #136daa; }
+.navbar-header { background-color: #fff; }
+.navbar-default .navbar-nav > li > a { color: #f5fbff; }
+.navbar-default .glyphicon { font-size: 16px; }
+.navbar-header { padding: 0 15px; }
+.navbar-brand { padding: 3px 10px 0; }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web.plugin>
+    <!--pc、tablet、mobile-->
+    <plugin.type>pc</plugin.type>
+    <!--  -->
+    <target.default>_opener_tab</target.default>
+	<controllers>
+	<!-- 把系统默认的控制器对应为插件体系下的控制器 -->
+	<controller name="com.exedosoft.plat.ui.jquery.pane.LayOutHeader">com.exedosoft.plat.ui.easyui.pane.LayOutHeader</controller>
+	
+	<controller name="com.exedosoft.plat.ui.jquery.menu.JqueryMenuXP">com.exedosoft.plat.ui.easyui.menu.MainMenu</controller>
+	<controller name="com.exedosoft.plat.ui.jquery.menu.MainMenu">com.exedosoft.plat.ui.easyui.menu.MainMenu</controller>
+	
+
+	</controllers>
+</web.plugin>

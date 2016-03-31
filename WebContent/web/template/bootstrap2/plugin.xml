@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web.plugin>
+    <!--pc、tablet、mobile-->
+    <plugin.type>pc</plugin.type>
+    <!--  -->
+    <target.default>_opener_tab</target.default>
+	<controllers>
+	<!-- 把系统默认的控制器对应为插件体系下的控制器 -->
+	<controller name="com.exedosoft.plat.ui.jquery.pane.LayOutHeader">com.exedosoft.plat.ui.bootstrap2.pane.LayOutHeader</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.pane.ContentPane">com.exedosoft.plat.ui.bootstrap.pane.ContentPane</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.pane.ContentPaneRightBorder">com.exedosoft.plat.ui.bootstrap.pane.ContentPaneRightBorder</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.pane.ContentPaneScroll">com.exedosoft.plat.ui.bootstrap.pane.ContentPaneScroll</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.pane.ContentPaneScrollRightBorder">com.exedosoft.plat.ui.bootstrap.pane.ContentPaneRightBorder</controller>
+	
+	<controller name="com.exedosoft.plat.ui.jquery.menu.JqueryMenuXP">com.exedosoft.plat.ui.bootstrap2.menu.MainMenu</controller>
+	<controller name="com.exedosoft.plat.ui.jquery.menu.MainMenu">com.exedosoft.plat.ui.bootstrap2.menu.MainMenu</controller>
+			<controller name="com.exedosoft.plat.ui.jquery.grid.GridCondition">com.exedosoft.plat.ui.bootstrap.grid.GridCondition</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.grid.GridConditionAutoTr">com.exedosoft.plat.ui.bootstrap.grid.GridCondition</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.grid.GridSupportMore">com.exedosoft.plat.ui.bootstrap.grid.GridFormTable</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.grid.GridList">com.exedosoft.plat.ui.bootstrap.grid.GridList</controller>
+
+		<controller name="com.exedosoft.plat.ui.jquery.grid.GridListStyle2">com.exedosoft.plat.ui.jquery.grid.GridList</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.grid.GridListOld">com.exedosoft.plat.ui.jquery.grid.GridList</controller>
+		
+		
+<!-- 		
+		<controller name="com.exedosoft.plat.ui.jquery.form.my97.DatePicker">com.exedosoft.plat.ui.bootstrap.form.DatePicker</controller>
+	 -->	
+		
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOStaticListPopup">com.exedosoft.plat.ui.jquery.form.DOStaticList</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOResultListPopup">com.exedosoft.plat.ui.bootstrap.form.DOResultListPopup</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOResultListPopupNoSplitPage">com.exedosoft.plat.ui.bootstrap.form.DOResultListPopup</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOResultListPopupNoSplitPageNoDefault">com.exedosoft.plat.ui.bootstrap.form.DOResultListPopup</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOResultListPopupAll">com.exedosoft.plat.ui.bootstrap.form.DOResultListPopup</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOResultListPopupPml">com.exedosoft.plat.ui.bootstrap.form.DOResultListPopupPml</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOValueResultList">com.exedosoft.plat.ui.bootstrap.form.DOValueResultList</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOResultListPopupWithLogin">com.exedosoft.plat.ui.bootstrap.form.DOResultListPopupWithLogin</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOInputCheckBoxList">com.exedosoft.plat.ui.bootstrap.form.DOInputCheckBoxList</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOInputRadio">com.exedosoft.plat.ui.bootstrap.form.DOInputRadio</controller>
+		<controller name="com.exedosoft.plat.ui.jquery.form.DOInputCheckBox">com.exedosoft.plat.ui.bootstrap.form.DOInputCheckBox</controller>
+		
+	
+	
+
+	</controllers>
+</web.plugin>

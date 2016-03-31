@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<div id='result'>
+	
+	</div>
+
+</body>
+
+<script>
+
+  console.log("EEPlat Restful Service test...");
+  
+
+  var globalService = "http://127.0.0.1:8080/eeplat/api";
+  var paras = "userName=llp&pwd=llp_dev_0001";
+
+  
+  var token = "";
+  $
+	.ajax({
+		type : "get",
+		url : globalService + "/token",
+		data : paras,
+		async : false,
+		success : function(data, textStatus) {
+			console.log(data);
+			token = data.token;
+		},
+		dataType : "json"
+	});
+  
+  console.log("token::" + token);
+  
+  $("#result").html("token::" + token);
+  
+  /////增加一个公司
+  
+  paras ="access_token=" + token;
+  paras = paras + "&Industrycode=" + encodeURIComponent(escape("互联网1"))  
+				+ "&citycode=" + encodeURIComponent(escape("北京"))
+				+ "&companyname=" + encodeURIComponent(escape("北京云荷素2"))
+				+ "&companyscale=" + encodeURIComponent(escape("10-20人"));
+    $
+	.ajax({
+		type : "post",
+		url : globalService + "/c/info",
+		data : paras,
+		success : function(data, textStatus) {
+			console.log(data);
+					},
+		dataType : "json"
+	});
+  
+  
+  
+  
+  
+  
+
+</script>
+
+
+</html>

@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<div id='result'>
+	
+	</div>
+
+</body>
+
+<script>
+
+  console.log("EEPlat Restful Service test...");
+////120.25.230.163
+  var globalService = "http://127.0.0.1:8080/eeplat/api";
+  var paras = "userName=llp&pwd=llp_dev_0001";
+  
+  var token = "";
+  $
+	.ajax({
+		type : "get",
+		url : globalService + "/token",
+		data : paras,
+		async : false,
+		success : function(data, textStatus) {
+			console.log(data);
+			token = data.token;
+		},
+		dataType : "json"
+	});
+
+	console.log("token::" + token);
+  
+  $("#result").html("token::" + token);
+  /////增加一个公司
+  
+  paras ="access_token=" + token;
+  paras = paras + "&userid=" + encodeURIComponent(escape("8af4e49d4e9b8aa5014e9bf43d2b001b"))   + "&interviewtime=2015-8-9&personuid=8af4e49d4ef43ec6014ef7eb05e20051&resumeboxuid=40289f0b4efb94e9014efbee611a0006"
+			;
+    $
+	.ajax({
+		type : "post",
+		url : globalService + "/hr/interview",
+		data : paras,
+		success : function(data, textStatus) {
+			console.log(data);
+		},
+		dataType : "json"
+	});
+  
+
+</script>
+
+
+</html>

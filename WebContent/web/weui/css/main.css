@@ -1,0 +1,13 @@
+.page{
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #fbf9fe;
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.weui_cell_warn_title {
+    color: #e64340;
+}
